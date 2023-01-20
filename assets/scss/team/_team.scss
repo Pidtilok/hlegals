@@ -1,0 +1,159 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+$indicator-size: 16px;
+
+.team {
+  padding-bottom: 40px;
+
+
+  &__container {
+    @extend %container;
+  }
+
+  &__content {
+    background-color: $color-gray-bg;
+    display: grid;
+    grid-template-columns: 1fr 820px;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas: "pic pag" "pic desc" "pic cap" "pic pos";
+
+
+    @include xl {
+      grid-template-areas: "pag pag" "desc desc" "pic cap" "pic pos";
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+
+  &__page-link {
+    grid-area: pag;
+
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active;
+    padding-top: 40px;
+
+
+    &::after {
+      display: inline-block;
+
+      width: 12px;
+      height: 12px;
+
+      content: "";
+      transform: translate(2px, 1px);
+
+      background-image: url(/assets/img/linkblue.svg);
+      background-repeat: no-repeat;
+    }
+
+    @include xl {
+      margin-left: 10px;
+    }
+  }
+
+
+  &__description {
+    grid-area: desc;
+
+    font-weight: 700;
+    line-height: $line-height;
+    @extend %text-liner-gradient-invert;
+
+    @include xl {
+      margin-left: 10px;
+    }
+
+    @include lg-min {
+      margin-bottom: 20px;
+      font-size: 42px;
+    }
+
+    @include ul {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
+  }
+
+  &__caption {
+    grid-area: cap;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    color: $color-gray-text;
+    margin-bottom: 5px;
+
+    @include xl {
+      align-items: center;
+    }
+
+  }
+
+  &__position {
+    grid-area: pos;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.375;
+    color: $color-gray-text;
+
+    @include xl {
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__picture {
+    grid-area: pic;
+    margin-right: 40px;
+  }
+
+  &__image {
+
+    @include xl {
+      margin-left: 10px;
+    }
+
+    @include xs-min {
+      width: 413px;
+      height: 500px;
+    }
+
+    @include xl-sm {
+      width: 250px;
+      height: 280px;
+    }
+
+    @include sm {
+      width: 60px;
+      height: 60px;
+      border-radius: 120px;
+    }
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+
+    gap: $gap-md;
+    padding-top: 20px;
+  }
+
+  &__indicator {
+    width: $indicator-size;
+    height: $indicator-size;
+
+    opacity: 0.2;
+    border-radius: $indicator-size * 0.5;
+    background-color: $color-active;
+
+
+    &.-active {
+      opacity: 1;
+    }
+  }
+}
