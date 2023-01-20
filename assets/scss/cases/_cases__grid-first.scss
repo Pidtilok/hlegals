@@ -1,0 +1,70 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.cases__grid-first {
+  display: grid;
+  background-color: $color-gray-bg;
+  align-items: end;
+
+  @include xl-min {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+  @include xl-md {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+  .case-item {
+    display: grid;
+    gap: 20px;
+    border-bottom: 1px solid $color-white;
+    border-left: 1px solid $color-white;
+    padding-left: 20px;
+    height: 100%;
+
+
+    grid-template-areas:
+      "ttl" "ttl" "ttl"
+      "desc" "desc" "desc"
+      "com" "com" "com";
+
+    &__title {
+      padding: 20px 0 20px;
+
+      font-size: 14px;
+      line-height: 1.21;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-accent;
+
+      border-bottom: 1px solid $color-white;
+
+      grid-area: ttl;
+    }
+
+    &__description {
+      font-size: 24px;
+      line-height: 1.16;
+      display: flex;
+      align-items: flex-end;
+      color: $color-primary-soft;
+      padding-top: 30px;
+
+      grid-area: desc;
+
+      @include lg {
+        font-size: 18px;
+      }
+    }
+
+    &__company {
+      font-size: 18px;
+      line-height: 1.44;
+      color: $color-gray-text ;
+      margin-bottom: 20px;
+
+      grid-area: com;
+    }
+  }
+
