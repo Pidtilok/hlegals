@@ -73,7 +73,7 @@
 
     line-height: $line-height;
 
-    @extend %text-liner-gradient-invert ;
+    @extend %text-liner-gradient-invert;
     @include lg-min {
       margin-bottom: 68px;
 

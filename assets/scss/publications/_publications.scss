@@ -1,2 +1,46 @@
 @use "../presets" as *;
 @use "../mixins" as *;
+
+.publications {
+
+  &__container {
+      @extend %container;
+    }
+
+  &__page-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active;
+
+    &::after {
+      display: inline-block;
+
+      width: 12px;
+      height: 12px;
+
+      content: "";
+      transform: translate(2px, 1px);
+
+      background-image: url(../img/bluelink.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: $line-height;
+
+    @extend %text-liner-gradient-invert;
+  }
+
+  &__card {
+    column-count: 3;
+  }
+}
+
+
+
