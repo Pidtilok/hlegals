@@ -5,6 +5,12 @@
 
   margin-inline: auto;
 }
+%container-xl {
+  width: min(100%, 1440px);
+
+  margin-inline: auto;
+}
+
 
 %text-liner-gradient {
   background: $text-gradient;

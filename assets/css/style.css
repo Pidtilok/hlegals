@@ -200,6 +200,12 @@ template {
   margin-inline: auto;
 }
 
+.partners__container {
+  width: min(100%, 1440px);
+
+  margin-inline: auto;
+}
+
 .slider__header.-active {
   background: -webkit-gradient(linear, left top, right top, color-stop(1%, #ef8080), to(#f0145a));
   background: -o-linear-gradient(left, #ef8080 1%, #f0145a 100%);
@@ -711,7 +717,7 @@ a {
       -ms-transform: translate(2px, 1px);
           transform: translate(2px, 1px);
 
-  background-image: url(/assets/img/bluelink.svg);
+  background-image: url(../img/bluelink.svg);
   background-repeat: no-repeat;
 }
 .team__description {

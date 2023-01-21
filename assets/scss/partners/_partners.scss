@@ -1,8 +1,13 @@
 @use "../presets" as *;
 @use "../mixins" as *;
 
+
 .partners {
   margin-bottom: 40px;
+
+  &__container {
+    @extend %container-xl;
+  }
 
   &__title {
     display: flex;
