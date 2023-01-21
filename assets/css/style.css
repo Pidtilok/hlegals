@@ -1052,6 +1052,11 @@ a {
     grid-template-columns: 320px 450px 540px;
   }
 }
+@media (min-width: 1380px) {
+  .partners__image {
+    width: 360px;
+  }
+}
 @media (max-width: 1379.8px) {
   .team__description {
     margin-bottom: 20px;
@@ -1236,5 +1241,8 @@ a {
   .service-item__image {
     width: 64px;
     height: 64px;
+  }
+  .partners__image {
+    width: 187px;
   }
 }
