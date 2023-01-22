@@ -621,6 +621,13 @@ a {
   background: #b3b3ba;
 }
 .services__page-link {
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+       -o-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
   letter-spacing: 1px;
   text-transform: uppercase;
 
@@ -657,6 +664,14 @@ a {
 
 .service-item {
   display: grid;
+
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+       -o-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 
   gap: 20px;
   grid-template-areas: "ico" "ttl" "dsc";
@@ -698,6 +713,13 @@ a {
 .team__page-link {
   padding-top: 40px;
 
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+       -o-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
   letter-spacing: 1px;
   text-transform: uppercase;
 
@@ -933,6 +955,13 @@ a {
 }
 
 .publications__page-link {
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+       -o-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
   letter-spacing: 1px;
   text-transform: uppercase;
 

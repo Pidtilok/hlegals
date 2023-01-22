@@ -29,6 +29,8 @@
       "desc" "desc" "desc"
       "com" "com" "com";
 
+
+
     &__title {
       padding: 20px;
 
@@ -41,6 +43,7 @@
       border-bottom: 1px solid $color-white;
 
       grid-area: ttl;
+
     }
 
     &__description {

@@ -4,8 +4,8 @@
 .publications {
 
   &__container {
-      @extend %container;
-    }
+    @extend %container;
+  }
 
   &__page-link {
     font-weight: 700;
@@ -27,6 +27,10 @@
       background-image: url(../img/bluelink.svg);
       background-repeat: no-repeat;
     }
+
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
   }
 
   &__title {
@@ -41,6 +45,3 @@
     column-count: 3;
   }
 }
-
-
-
