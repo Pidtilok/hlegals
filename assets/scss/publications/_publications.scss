@@ -14,6 +14,10 @@
     background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
 
     @include abs-position(calc(100% - 200px));
+
+    @include lg {
+      display: none
+    }
   }
 
   &__container {
@@ -54,11 +58,22 @@
     margin-bottom: 40px;
 
     @extend %text-liner-gradient-invert;
+
+    @include lg {
+      font-size: 32px;
+    }
   }
 
   &__card {
     gap: $gap-xl;
     column-count: 3;
+
+    @include ul-lg {
+      column-count: 2;
+    }
+    @include lg {
+      column-count: 1;
+    }
   }
 
   &__action {
@@ -85,5 +100,11 @@
     bottom: 65px;
     z-index: 2;
 
+    @include lg {
+      position: static;
+      bottom: 0;
+      margin-bottom: 40px;
+      z-index: 0;
+    }
   }
 }
