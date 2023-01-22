@@ -2,6 +2,42 @@
 @use "../mixins" as *;
 
 .publication-item {
+  background-color: $color-white;
+  margin-bottom: 40px;
+
+
+
+  &__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    padding: 20px 20px 10px 20px;
+  }
+
+  &__date {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-gray-text;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-bottom: 4px solid $color-gray-separator;
 
   }
 
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.38;
+    padding: 20px;
+  }
+
+  &__picture {}
+
+  &__button {}
+
+}
