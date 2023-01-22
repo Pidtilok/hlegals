@@ -1,2 +1,40 @@
 @use "../presets" as *;
 @use "../mixins" as *;
+
+.footer {
+  background-color: $color-gray-bg;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 30px;
+
+    @include lg {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__copyright {
+    padding-top: 35px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: $line-height;
+    text-align: right;
+    color: $color-gray-text;
+
+    @include lg {
+      text-align: center;
+    }
+  }
+}

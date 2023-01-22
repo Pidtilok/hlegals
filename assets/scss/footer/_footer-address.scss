@@ -1,2 +1,37 @@
 @use "../presets" as *;
 @use "../mixins" as *;
+
+.footer-address {
+  display: flex;
+  flex-direction: row;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  align-items: center;
+
+  @include lg {
+    flex-direction: column;
+    text-align: center;
+    }
+
+  &__locations-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: $line-height;
+    color: $color-primary;
+    padding-right: 50px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include lg {
+      padding-top: 10px;
+    }
+  }
+}
+
