@@ -77,6 +77,8 @@
     display: flex;
     justify-content: flex-end;
 
+
+
     gap: $gap-md;
     @include unlist;
     @include md {
@@ -108,6 +110,13 @@
     line-height: 1.16;
     color: $color-active;
     padding: 0.25em 0;
+
+    &:hover {
+      color: $color-accent;
+      padding-bottom: 3px;
+      border-bottom: 2px solid $color-accent;
+      transition: .3s linear;
+    }
 
     &.-active {
       color: $color-accent;

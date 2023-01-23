@@ -78,6 +78,7 @@
 
     gap: $gap-md;
     @include unlist;
+
     @include md {
       position: absolute;
       top: 100%;
@@ -106,5 +107,12 @@
     padding: 0.25em 0;
 
     color: $color-white;
+
+    &:hover {
+      color: $color-accent;
+      padding-bottom: 3px;
+      border-bottom: 2px solid $color-accent;
+      transition: .3s linear;
+    }
   }
 }
