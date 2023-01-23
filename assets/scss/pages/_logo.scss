@@ -1,0 +1,32 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.logo {
+
+  &__slash {
+    @include sm {
+      height: 24px;
+    }
+  }
+
+  &__symbol {
+    @include sm {
+      height: 24px;
+    }
+  }
+  &__image {
+    @include sm {
+      width: 77px;
+    }
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 38px;
+    line-height: $line-height;
+    color: $color-primary;
+
+    @include sm {
+      font-size: 19px;
+    }
+  }
+}

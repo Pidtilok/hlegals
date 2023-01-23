@@ -1,0 +1,44 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.team-header {
+  position: relative;
+
+  &__grid {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    left: 0;
+
+    display: grid;
+    align-items: center;
+
+    @extend %container;
+    @include sm-min {
+      top: 50px;
+
+      gap: $gap-sm $gap;
+      grid-template-areas: "logo act" "logo menu";
+    }
+    @include sm {
+      top: $gap;
+
+      gap: $gap;
+      grid-template-areas: "act act" "logo menu";
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-start;
+    grid-area: logo;
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__actions {
+    grid-area: act;
+  }
+}
