@@ -1,2 +1,6 @@
 @use "../presets" as *;
 @use "../mixins" as *;
+
+.visually-hidden {
+  @include visually-hidden;
+}
