@@ -3,7 +3,6 @@
 
 
 .partners {
-
   &__container {
     @extend %container-xl;
   }
@@ -38,7 +37,6 @@
     @include ul-min {
       width: 360px;
     }
-
     @include xs {
       width: 187px;
     }
