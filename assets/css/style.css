@@ -1238,6 +1238,7 @@ a {
 }
 
 .team-header__grid {
+  position: relative;
   z-index: 2;
   right: 0;
   left: 0;
@@ -1247,7 +1248,7 @@ a {
   align-items: center;
   -ms-flex-align: center;
 
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .team-header__logo {
   display: -webkit-box;
@@ -1424,7 +1425,7 @@ a {
 }
 
 .members {
-  margin-top: 75px;
+  margin-top: 120px;
   margin-bottom: 60px;
 }
 .members__title {
