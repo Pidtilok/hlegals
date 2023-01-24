@@ -2,7 +2,6 @@
 @use "../mixins" as *;
 
 .logo {
-
   &__slash {
     @include sm {
       height: 24px;
@@ -20,10 +19,11 @@
     }
   }
   &__link {
-    font-weight: 400;
-    font-size: 38px;
-    line-height: $line-height;
     color: $color-primary;
+
+    font-size: 38px;
+    font-weight: 400;
+    line-height: $line-height;
 
     @include sm {
       font-size: 19px;

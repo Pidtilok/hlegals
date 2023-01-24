@@ -3,35 +3,39 @@
 
 .footer-address {
   display: flex;
+  align-items: center;
   flex-direction: row;
+
   padding-top: 25px;
   padding-bottom: 25px;
-  align-items: center;
 
   @include lg {
     flex-direction: column;
+
     text-align: center;
-    }
+  }
 
   &__locations-link {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: $line-height;
-    color: $color-primary;
     padding-right: 50px;
+
+    color: $color-primary;
+
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: $line-height;
   }
 
   &__link {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.16;
     letter-spacing: 1px;
     text-transform: uppercase;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.16;
 
     @include lg {
       padding-top: 10px;
     }
   }
 }
-

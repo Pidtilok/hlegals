@@ -3,73 +3,76 @@
 
 .cases__grid-first {
   display: grid;
-  background-color: $color-gray-bg;
   align-items: end;
+
+  background-color: $color-gray-bg;
 
   @include xl-min {
     grid-template-columns: repeat(3, 1fr);
-
   }
   @include xl-md {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-  .case-item {
-    display: grid;
-    gap: 20px;
+.case-item {
+  display: grid;
+  align-items: end;
+
+  height: 100%;
+
+  border-bottom: 1px solid $color-white;
+  border-left: 1px solid $color-white;
+
+  gap: 20px;
+  grid-template-areas: "ttl" "desc" "desc"
+  "desc" "desc" "desc"
+  "com" "com" "com";
+
+
+
+  &__title {
+    padding: 20px;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-accent;
     border-bottom: 1px solid $color-white;
-    border-left: 1px solid $color-white;
-    height: 100%;
-    align-items: end;
 
+    font-size: 14px;
+    line-height: 1.21;
 
-    grid-template-areas:
-      "ttl" "desc" "desc"
-      "desc" "desc" "desc"
-      "com" "com" "com";
+    grid-area: ttl;
+  }
 
+  &__description {
+    display: flex;
+    align-items: flex-end;
 
+    padding-top: 30px;
+    padding-left: 20px;
 
-    &__title {
-      padding: 20px;
+    color: $color-primary-soft;
 
-      font-size: 14px;
-      line-height: 1.21;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: $color-accent;
+    font-size: 24px;
+    line-height: 1.16;
 
-      border-bottom: 1px solid $color-white;
-
-      grid-area: ttl;
-
-    }
-
-    &__description {
-      font-size: 24px;
-      line-height: 1.16;
-      display: flex;
-      align-items: flex-end;
-      color: $color-primary-soft;
-      padding-top: 30px;
-      padding-left: 20px;
-
-      grid-area: desc;
-
-      @include lg {
-        font-size: 18px;
-      }
-    }
-
-    &__company {
+    grid-area: desc;
+    @include lg {
       font-size: 18px;
-      line-height: 1.44;
-      color: $color-gray-text ;
-      margin-bottom: 20px;
-      padding-left: 20px;
-
-      grid-area: com;
     }
   }
 
+  &__company {
+    margin-bottom: 20px;
+    padding-left: 20px;
+
+    color: $color-gray-text ;
+
+    font-size: 18px;
+    line-height: 1.44;
+
+    grid-area: com;
+  }
+}

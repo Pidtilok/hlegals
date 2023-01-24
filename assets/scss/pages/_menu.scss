@@ -8,11 +8,12 @@
     width: 30px;
     height: 22.5px;
     margin-left: auto;
-    color: $color-primary;
 
     cursor: pointer;
     transition: 0.5s ease-in-out;
     transform: rotate(0deg);
+
+    color: $color-primary;
 
     @include md-min {
       display: none;
@@ -77,8 +78,6 @@
     display: flex;
     justify-content: flex-end;
 
-
-
     gap: $gap-md;
     @include unlist;
     @include md {
@@ -105,17 +104,22 @@
 
   &__link {
     display: block;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.16;
-    color: $color-active;
+
     padding: 0.25em 0;
 
+    color: $color-active;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.16;
+
     &:hover {
-      color: $color-accent;
       padding-bottom: 3px;
+
+      transition: 0.3s linear;
+
+      color: $color-accent;
       border-bottom: 2px solid $color-accent;
-      transition: .3s linear;
     }
 
     &.-active {
@@ -128,4 +132,3 @@
     }
   }
 }
-

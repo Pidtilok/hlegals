@@ -3,6 +3,7 @@
 
 .services {
   position: relative;
+
   margin-bottom: 40px;
 
   border-radius: 0 0 12px 12px;
@@ -47,6 +48,9 @@
 
 
   &__page-link {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
     letter-spacing: 1px;
     text-transform: uppercase;
 
@@ -65,10 +69,6 @@
 
       background-image: url(../img/LinkArrow.svg);
     }
-
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    transform: rotate(0deg);
   }
 
   &__title {

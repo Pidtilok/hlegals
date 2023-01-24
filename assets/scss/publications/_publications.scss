@@ -2,20 +2,21 @@
 @use "../mixins" as *;
 
 .publications {
-  background-color: $color-gray-bg;
-  padding-top: 40px;
   position: relative;
+
+  padding-top: 40px;
+
   border-bottom: 4px solid $color-gray-separator;
+  background-color: $color-gray-bg;
 
   &::after {
     content: "";
 
-    background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+    background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #f5f5fa 86.5%);
 
     @include abs-position(calc(100% - 200px));
-
     @include lg {
-      display: none
+      display: none;
     }
   }
 
@@ -24,12 +25,17 @@
   }
 
   &__page-link {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.21;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-active;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.21;
 
 
     &::after {
@@ -44,29 +50,24 @@
       background-image: url(../img/bluelink.svg);
       background-repeat: no-repeat;
     }
-
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    transform: rotate(0deg);
   }
 
   &__title {
-    font-weight: 700;
-    font-size: 42px;
-    line-height: $line-height;
     margin-bottom: 40px;
 
-    @extend %text-liner-gradient-invert;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: $line-height;
 
+    @extend %text-liner-gradient-invert;
     @include lg {
       font-size: 32px;
     }
   }
 
   &__card {
-    gap: $gap-xl;
     column-count: 3;
-
+    gap: $gap-xl;
     @include ul-lg {
       column-count: 2;
     }
@@ -77,33 +78,38 @@
 
   &__action {
     position: relative;
+
     display: flex;
     justify-content: center;
   }
 
   &__button {
-    background-color: $color-active;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.21;
-    text-align: center;
-    color: $color-white;
+    position: absolute;
+    z-index: 2;
+    bottom: 65px;
+
     min-width: 250px;
     min-height: 50px;
-    border-radius: 12px;
-    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
-    border: none;
-    cursor: pointer;
 
-    position: absolute;
-    bottom: 65px;
-    z-index: 2;
+    cursor: pointer;
+    text-align: center;
+
+    color: $color-white;
+    border: none;
+    border-radius: 12px;
+    background-color: $color-active;
+    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.21;
 
     @include lg {
       position: static;
-      bottom: 0;
-      margin-bottom: 40px;
       z-index: 0;
+      bottom: 0;
+
+      margin-bottom: 40px;
     }
   }
 }

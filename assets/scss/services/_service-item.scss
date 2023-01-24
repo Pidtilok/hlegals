@@ -4,6 +4,10 @@
 .service-item {
   display: grid;
 
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  transform: rotate(0deg);
+
   gap: $gap;
   grid-template-areas: "ico" "ttl" "dsc";
   @include xl-min {
@@ -16,9 +20,6 @@
     grid-template-areas: "ico ttl" "dsc dsc";
     grid-template-columns: auto 1fr;
   }
-  cursor: pointer;
-    transition: 0.5s ease-in-out;
-    transform: rotate(0deg);
 
   &__title {
     color: $color-active;

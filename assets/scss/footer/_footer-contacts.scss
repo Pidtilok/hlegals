@@ -4,9 +4,9 @@
 
 .footer-contacts {
   display: flex;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
 
   @include lg {
     flex-direction: column;
@@ -21,17 +21,20 @@
   }
 
   &__phones-link {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: $line-height;
-    text-align: right;
-    color: $color-primary-alt;
     padding-right: 26px;
+
+    text-align: right;
+
+    color: $color-primary-alt;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: $line-height;
   }
 
   &__email {
-    font-weight: 700;
     font-size: 16px;
+    font-weight: 700;
     line-height: $line-height;
 
     @include lg {

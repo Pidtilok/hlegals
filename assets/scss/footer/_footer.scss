@@ -12,6 +12,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     padding-bottom: 30px;
 
     @include lg {
@@ -27,11 +28,14 @@
 
   &__copyright {
     padding-top: 35px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: $line-height;
+
     text-align: right;
+
     color: $color-gray-text;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: $line-height;
 
     @include lg {
       text-align: center;

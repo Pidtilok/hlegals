@@ -11,13 +11,13 @@ $indicator-size: 16px;
   }
 
   &__content {
-    background-color: $color-gray-bg;
     display: grid;
+
+    background-color: $color-gray-bg;
+
+    grid-template-areas: "pic pag" "pic desc" "pic cap" "pic pos";
     grid-template-columns: 1fr 820px;
     grid-template-rows: auto auto auto 1fr;
-    grid-template-areas: "pic pag" "pic desc" "pic cap" "pic pos";
-
-
     @include xl {
       grid-template-areas: "pag pag" "desc desc" "pic cap" "pic pos";
       grid-template-columns: repeat(3, 1fr);
@@ -26,14 +26,23 @@ $indicator-size: 16px;
 
 
   &__page-link {
-    grid-area: pag;
+    padding-top: 40px;
+
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-active;
 
     font-size: 14px;
     line-height: 17px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: $color-active;
-    padding-top: 40px;
+
+    grid-area: pag;
+    @include xl {
+      margin-left: 10px;
+    }
 
 
     &::after {
@@ -48,92 +57,82 @@ $indicator-size: 16px;
       background-image: url(../img/bluelink.svg);
       background-repeat: no-repeat;
     }
-
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    transform: rotate(0deg);
-
-    @include xl {
-      margin-left: 10px;
-    }
   }
 
 
   &__description {
-    grid-area: desc;
-
     font-weight: 700;
     line-height: $line-height;
-    @extend %text-liner-gradient-invert;
 
+    @extend %text-liner-gradient-invert;
+    grid-area: desc;
     @include xl {
       margin-left: 10px;
     }
-
     @include lg-min {
       margin-bottom: 20px;
+
       font-size: 42px;
     }
-
     @include ul {
       margin-bottom: 20px;
+
       font-size: 32px;
     }
-
   }
 
   &__caption {
-    grid-area: cap;
-
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.16;
-    color: $color-gray-text;
     margin-bottom: 5px;
 
+    color: $color-gray-text;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.16;
+
+    grid-area: cap;
     @include xl {
       align-items: center;
     }
   }
 
   &__position {
-    grid-area: pos;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.375;
     color: $color-gray-text;
 
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375;
+
+    grid-area: pos;
     @include xl {
       align-items: center;
+
       margin-bottom: 20px;
     }
   }
 
   &__picture {
-    grid-area: pic;
     margin-right: 40px;
+
+    grid-area: pic;
   }
 
   &__image {
-
     @include xl {
       margin-left: 10px;
     }
-
     @include xs-min {
       width: 413px;
       height: 500px;
     }
-
     @include xl-sm {
       width: 250px;
       height: 280px;
     }
-
     @include sm {
       width: 60px;
       height: 60px;
+
       border-radius: 120px;
     }
   }
@@ -142,8 +141,9 @@ $indicator-size: 16px;
     display: flex;
     justify-content: center;
 
-    gap: $gap-md;
     padding-top: 20px;
+
+    gap: $gap-md;
   }
 
   &__indicator {
