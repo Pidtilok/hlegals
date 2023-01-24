@@ -1,0 +1,74 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.member-item {
+  display: grid;
+  grid-template-areas:
+  "pic pic pic"
+  "name name but"
+  "pos pos but";
+  grid-template-columns: 1fr 1fr auto;
+
+  cursor: pointer;
+
+@include xs {
+  
+  grid-template-areas:
+  "pic name"
+  "pic pos"
+  "pic but";
+}
+
+  &__picture {
+    grid-area: pic;
+
+  }
+
+  &__image {
+
+      display: block;
+
+      @include ul-min {
+        width: 413px;
+        height: 500px;
+      }
+      @include ul-xs {
+        width: 330px;
+        height: 400px;
+      }
+      @include xs {
+        width: 150px;
+        height: 190px;
+      }
+  }
+
+  &__name {
+    font-size: 18px;
+    line-height: 1.16;
+    color: $color-primary;
+    padding-top: 20px;
+    padding-bottom: 5px;
+
+    grid-area: name;
+
+    &:hover {
+      color: $color-accent;
+      padding-bottom: 3px;
+      transition: .3s linear;
+    }
+  }
+
+  &__position {
+    font-size: 16px;
+    line-height: 1.38;
+    color: $color-gray-text;
+
+    grid-area: pos;
+  }
+
+  &__button {
+    padding-top: 23px;
+
+    grid-area: but;
+  }
+}
